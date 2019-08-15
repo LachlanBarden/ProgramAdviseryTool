@@ -1,0 +1,1 @@
+Main page of the whole project where the magic happens

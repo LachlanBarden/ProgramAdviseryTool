@@ -38,5 +38,77 @@ Choose :
 
 
 <b>Click here for an explaination of how to use our program</b>
+	<br/><br/>
+<form>
+  Year of Starting Program (Degree):<br>
+  <input type="text" name="yearOfStart"><br>
+	Part time or Full Time Study:<b>REPLACE WITH DROP DOWN?!</b><br>
+  <input type="text" name="unitNumber">
+</form>
+<!--- Form for finding out which set of subjects to use might move above the Design your program section and then use some add links see below code for assitance -->
+
+	
+	
+<!-- commit this code out just here for reference for the guys to work on some smarter dropdown menus with small amount of javascript. Move Javascript to seperate document guys its just better practice...	
+	<select id="ddl2" onchange="configureSelectionMenu('ddl2')">
+    </select>
+
+    <ul id='linkList'></ul>
+
+    <script type="text/javascript">
+	    
+	    
+    function configureSelectionMenu(ddlBeingChanged) {
+        var ddl = document.getElementById('ddlBeingChanged');
+        var ddl1ChosenValue=document.getElementById('ddl1').value;
+
+
+        var linkLists = {
+            Nursing: {
+                "Major": ['https:linkexample.com', 'https://linkexample2'],
+            },
+
+            InformationTechnology: {
+                "Media": ['http://andorra.example.com/country', 'http://andorra.example.com/overview'],
+                "Software Design": ['http://sickofwritingexamplecode.com', 'http://fakelinkonfakesteet.org'],
+                "BusinessTech": ['http://BUSTECH.example', 'http://BT2.example'],
+            }
+        };
+
+	    
+        if (ddlBeingChanged == "ddl1") {
+            console.log(ddl1ChosenValue);
+            for (var ddl2 in linkLists[ddl1ChosenValue]){
+                console.log(ddl2);
+                createOption(document.getElementById('ddl2'), ddl2, ddl2);    
+            }
+        } else if (ddlBeingChanged == "ddl2") {
+            var ddl2ChosenValue=document.getElementById('ddl2').value;
+
+
+            var linkArray=linkLists[ddl1ChosenValue][ddl2ChosenValue];
+            // The linkArray:
+      
+            var linkListHTML="";
+            for (var i in linkArray){
+                var URL=linkArray[i];
+                linkListHTML+="<li><a href='"+URL+"'>"+URL+"</a></li>";
+            }
+            document.getElementById('linkList').innerHTML=linkListHTML;
+
+        }
+
+
+    }
+
+    function createOption(ddl, text, value) {
+        var opt = document.createElement('option');
+        opt.value = value;
+        opt.text = text;
+        ddl.options.add(opt);
+    }
+    </script>
+	End of exmaple code put it in a different document and play with it so you understand how it works too. We are going to use it a far bit with all our linking.
+	-->
 </body>
 </html>

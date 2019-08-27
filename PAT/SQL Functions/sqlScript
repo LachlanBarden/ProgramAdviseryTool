@@ -1,0 +1,51 @@
+/* PAT Database. Created by KHempsall for University of Newcastle August 2019 | EBUS3030 */
+
+	USE MASTER
+	GO
+	IF DB_ID ('PAT') IS NOT NULL -- Check if it already exists and drop if it is
+	DROP DATABASE PAT;
+	GO
+	CREATE DATABASE PAT; -- Create database
+	GO
+
+DROP TABLE Program; -- Drop Program table
+DROP TABLE Major; -- Drop major table
+DROP TABLE Course -- Drop Course table
+DROP TABLE sysAdmin -- Drop sysAdmin table
+GO 
+
+CREATE TABLE Program ( -- Creates Program Table
+	programID varchar(8) not null,
+	programName text not null,
+	unitsRequired smallint not null,
+	maxYears tinyint not null,
+Primary Key (programID)
+)
+
+CREATE TABLE Major ( -- Creates Major Table
+	majorID varchar(8) not null,
+	majorName text not null,
+Primary Key (majorID)
+)
+
+CREATE TABLE Course ( -- Creates Course Table
+	courseID varchar(8) not null,
+	courseName text not null,
+	unitValue tinyint not null,
+	courseLevel smallint not null,
+	priorityLevel tinyint not null,
+	semAvail tinyint null, -- may be an inactive course
+	preRequisite varchar(8) null, -- may not have any
+	equivalent varchar(8) null, -- may not have any
+	activeStatus text,
+Primary key (courseID)
+)
+
+CREATE TABLE sysAdmin ( -- Creates table for Admin
+	adminID int identity not null, --system generated ID
+	fName text not null,
+	mName text null, -- for people with three names
+	lName text not null,
+	clearanceLevel smallint not null,
+Primary key (adminID)
+)

@@ -1,0 +1,147 @@
+-- PAT Database
+-- Created by KHempsall for University of Newcastle
+-- August 2019, EBUS3030
+---------------------------------------------------
+	USE MASTER
+	GO
+	IF DB_ID ('PAT') IS NOT NULL				-- Check if it already exists and drop if it is
+	DROP DATABASE PAT;
+	GO
+	CREATE DATABASE PAT;						-- Create database
+	GO
+
+DROP TABLE Program;								-- Drop Program table
+DROP TABLE Major;								-- Drop major table
+DROP TABLE Course								-- Drop Course table
+DROP TABLE sysAdmin								-- Drop sysAdmin table
+GO 
+
+CREATE TABLE Program (							
+-- Creates Program Table
+	programID char(8) unique not null,
+	programName text not null,
+	unitsRequired smallint not null,
+	maxYears tinyint not null,
+Primary Key (programID)
+)
+
+CREATE TABLE Major ( -- Creates Major Table
+	majorID char(8) unique not null,
+	majorName text not null,
+Primary Key (majorID),
+--Foreign Key (programID) References Program(programID),
+--Foreign Key (courseID) References Course(courseID)
+)
+
+CREATE TABLE Course ( -- Creates Course Table
+	courseID char(9) unique not null,
+	courseName text not null,
+	unitValue tinyint not null,
+	courseLevel smallint not null,
+	priorityLevel tinyint not null,
+	--semAvail tinyint null, -- leaving this out to simplify inital system
+	preRequisite char(9) null, -- may not have any
+	equivalent varchar(9) null, -- may not have any
+	activeStatus text, -- allows for course redundancy
+Primary key (courseID)
+)
+
+CREATE TABLE sysAdmin ( -- Creates table for Admin
+	adminID int identity not null, --system generated ID
+	fName text not null,
+	mName text null, -- for people with three names
+	lName text not null,
+	clearanceLevel smallint not null,
+Primary key (adminID)
+)
+-----------------------------------------
+-- Populate DB with our two test programs
+INSERT INTO Program (
+	programID,
+	programName,
+	unitsRequired,
+	maxYears
+)
+
+VALUES
+	('INFT0001', 'Bachelor of Information Technology', 240, 3),
+	('NURS0001', 'Bachelor of Nursing', 240, 3);
+GO
+
+-- ---------------------------------------------------------------
+/* Populate our Major table with the majors from IT and Nursing */
+INSERT INTO Major (
+	majorID,
+	majorName
+)
+VALUES
+	('INFT0001', 'Bachelor of IT Core Courses'), -- Need a major for core courses to be assigned to
+	('INFT0002', 'Interactive Media'), -- Future issue to look at, what to do with double major students?
+	('INFT0003', 'Business Technology'),
+	('INFT0004', 'Systems Development'),
+	('NURS0001', 'Bachelor of Nursing Core'); -- Nursing does not have majors.
+GO
+
+/* Populate Course with course data for IT Degrees */
+INSERT INTO Course (
+	courseID,
+	courseName, -- learned a quicker way to insert multiple rows
+	unitValue,
+	courseLevel,
+	priorityLevel,
+	preRequisite,
+	equivalent,
+	activeStatus
+)
+
+VALUES 
+	('COMP1010', 'Computing Fundamentals', 10, 1000, 1, null, 'INFT1001', 'Active'), -- priority level 1 indicates highest priority aka do first
+	('INFT1004', 'Introduction to Programming', 10, 1000, 1, null, null, 'Active'), -- need a check later, SENG1110 can be taken in place of INFT1004
+	('SENG1110', 'Object Oriented Programming', 10, 1000, 1, null, null, 'Active'), -- same as above, 1004 can be taken in place of seng 1110
+	('SENG1050', 'Web Technologies', 10, 1000, 1, null, null, 'Active'),
+	('INFT1150', 'Foundations of Information Systems', 10, 1000, 1, null, 'INFT1001', 'Active'), -- should be add the inactive courses to the db?
+	('COMP1140', 'Database and Information Management', 10, 1000, 1, null, null, 'Active'), -- Need to refer to pre-requisite map of what the default order for the degree is
+	('SENG2130', 'Systems Analysis and Design', 10, 2000, 1, null, null, 'Active'),
+	('INFT2031', 'Systems and Network Administration', 10, 2000, 1, null, null, 'Active'),
+	('INFT2150', 'Business Analysis', 10, 2000, 1, null, null, 'Active'),
+	('SENG2260', 'Human Computer Interaction', 10, 2000, 1, null, null, 'Active'),
+	('INFT3100', 'Project Management', 10, 3000, 1, null, null, 'Active'),
+	('COMP3851A', 'Computer Science and Information Technology Work Integrated Learning Part A', 10, 3000, 3, null, null, 'Active'),
+	('COMP3851B', 'Computer Science and Information Technology Work Integrated Learning Part B', 10, 3000, 3, 'COMP3851B', null, 'Active');
+
+/* Populates the Course table with data for the Business Technology Major */
+INSERT INTO Course ( -- Need to look at what we're going to do with the major courses, not all are required
+	courseID,
+	courseName,
+	unitValue,
+	courseLevel,
+	priorityLevel,
+	preRequisite,
+	equivalent,
+	activeStatus
+)
+
+VALUES
+	('STAT1060', 'Business Decision Making', 10, 1000, 1, null, null, 'Active'), 
+	('EBUS3050', 'The Digital Economy', 10, 3000, 1, null, null, 'Active'),
+	('EBUS3030', 'Business Intelligence', 10, 3000, 1, null, null, 'Active'),
+	('ACFI1001', 'Accounting for Decision Makers', 10, 1000, 1, null, null, 'Active'),
+	('ACFI1002', 'Accounting Practice', 10, 1000, 1, null, null, 'Active'),
+	('CMNS1290', 'Introduction to Public Relations', 10, 1000, 1, null, null, 'Active'),
+	('ECON1001', 'Microeconomics for Business Decisions', 10, 1000, 1, null, null, 'Active'),
+	('ECON1002', 'Macroeconomics in the Global Economy', 10, 1000, 1, null, null, 'Active'),
+	('MNGT1001', 'Introduction to Management', 10, 1000, 1, null, 'IRHR1001', 'Active'),
+	('MNGT1002', 'Introduction to Entrepreneurship and Innovation', 10, 1000, 1, null, null, 'Active'),
+	('MKTG1001', 'Foundations of Marketing', 10, 1000, 1, null, null, 'Active'),
+	('IRHR2270', 'Introduction to Human Resource Management', 10, 2000, 1, null, null, 'Active'),
+	('MNGT2002', 'Business Venturing', 10, 2000, 1, null, null, 'Active'),
+	('MNGT2005', 'Leadership and Ethics', 10, 2000, 1, null, null, 'Active'),
+	('INFT3007', 'The Information Resource', 10, 3000, 1, null, null, 'Active'),
+	('IRHR3035', 'Managing Diversity', 10, 3000, 1, null, null, 'Active'),
+	('MNGT3008', 'Advanced Innovation Management', 10, 3000, 1, null, null, 'Active'),
+	('MNGT3011', 'Leadership Organisation Change', 10, 3000, 1, null, 'MNGT3005', 'Active'),
+	('MNGT3012', 'Strategic Business Management', 10, 3000, 1, null, 'MNGT2001', 'Active')
+
+SELECT * FROM Program -- Test that data has been inserted into Progaram
+SELECT * FROM Major -- Test that data has been inserted into Major
+SELECT * FROM Course -- Test that data has been inserted into Course

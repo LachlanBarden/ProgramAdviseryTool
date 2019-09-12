@@ -1,0 +1,9 @@
+Need to include queries to check number of courses completed is sufficient, and that students dont exceed the maximum of 10 x 1000 unit levels. e.g.
+
+CHECK SUM (PAT.courseUnit) >= [whatever the required number of units is per degree] 
+CHECK SUM of courseUnit WHERE unitLevel = 1000 =< 1000
+
+We will also need checks to see if students have completed an old course which was replaced by a new one.
+E.g. SENG1050 used to be called COMP1050
+
+Example code: IF courseStatus = 'Completed' WHERE courseID = 'COMP1050' UPDATE TABLE .. (to remove 'SENG1050') as the student will not need to complete SENG1050.

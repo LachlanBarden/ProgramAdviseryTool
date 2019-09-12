@@ -1,8 +1,10 @@
 ABOUT:
 -------
-I have been looking into what order (attribute called priorityLevel) courses should be completed in to most efficiently complete the IT degree w/ BTech major (e.g. all the courses that are \pre-requisites for another should be done first).
+I have been looking into what order (attribute called priorityLevel) courses should be completed in to most efficiently complete the
+IT degree w/ BTech major (e.g. all the courses that are \pre-requisites for another should be done first).
 
-I am proceeding with the idea that all the electives & low-priority major courses will be completed last, or only as fill-ins when the core courses we recommend aren't available in the current semester that a student is enrolling in.
+I am proceeding with the idea that all the electives & low-priority major courses will be completed last, or only as fill-ins when the
+core courses we recommend aren't available in the current semester that a student is enrolling in.
 
 
 I came up with this draft order:
@@ -46,4 +48,5 @@ YEAR THREE
     3 x electives or 2nd major courses 
 
 
-I think it could also be useful to assign priority levels to the courses within majors too, so it can be used to sort the courses when they are provided by the UI as options? I will upload another copy of the excel data that includes the priority levels for this major.
+I think it could also be useful to assign priority levels to the courses within majors too, so it can be used to sort the courses when
+they are provided by the UI as options? I will upload another copy of the excel data that includes the priority levels for this major.

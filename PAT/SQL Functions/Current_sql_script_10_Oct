@@ -1,0 +1,91 @@
+USE MASTER
+	GO
+	IF DB_ID ('PAT') IS NOT NULL				-- Check if it already exists and drop if it is
+	DROP DATABASE PAT;
+	GO
+	CREATE DATABASE PAT;						-- Create database
+	GO
+
+DROP TABLE Program								-- Drop Program table
+DROP TABLE Major								-- Drop major table
+DROP TABLE Course								-- Drop Course table
+DROP TABLE Administrator					    -- Drop Admin table
+
+GO 
+
+CREATE TABLE Program (							
+-- Creates Program Table
+	programID char(8) unique not null,
+	programName text not null,
+	unitsRequired smallint not null,
+	maxYears tinyint not null,
+Primary Key (programID)
+)
+
+CREATE TABLE Major ( -- Creates Major Table
+	majorID char(8) unique not null,
+	majorName text not null,
+Primary Key (majorID),
+--Foreign Key (programID) References Program(programID),
+--Foreign Key (courseID) References Course(courseID)
+)
+
+CREATE TABLE Course ( -- Creates Course Table
+	courseID char(15) unique not null,
+	courseName text not null,
+	unitValue tinyint not null,
+	courseLevel smallint not null,
+	priorityLevel tinyint null,
+	--semAvail tinyint null, -- leaving this out to simplify inital system
+	preRequisite char(50) null, -- may not have any
+	equivalent varchar(50) null, -- may not have any
+	activeStatus text, -- allows for course redundancy
+	mandatory int null,
+	majorID char(15),
+Primary key (courseID),
+--Foreign Key (majorID) REFERENCES Major(MajorID)
+)
+
+CREATE TABLE Administrator ( -- Creates table for Admin
+	adminID int identity not null, --system generated ID
+	fName text not null,
+	mName text null, -- for people with three names
+	lName text not null,
+	clearanceLevel smallint not null,
+Primary key (adminID)
+)
+
+--Populate Program table with data
+INSERT INTO Program (
+	programID,
+	programName,
+	unitsRequired,
+	maxYears
+)
+
+VALUES
+	('INFT0001', 'Bachelor of Information Technology', 240, 3),
+	('NURS0001', 'Bachelor of Nursing', 240, 3);
+GO
+
+SELECT * FROM Program -- Test that data has been inserted into Progaram
+SELECT * FROM Major -- Test that data has been inserted into Major
+SELECT * FROM Course -- Test that data has been inserted into Course
+
+
+Select * From Database_data
+
+
+
+
+INSERT INTO Course(courseID, courseName, unitValue, courseLevel, preRequisite, equivalent, mandatory, priorityLevel, majorID)
+	Select [COURSEID], [COURSE_NAME], [UNITS], [LEVEL], [PRE_REQUISITES], [EQUIVELANT], [Required], [Priority_Level], [MajorID]
+	From Database_Data
+
+	Select * From Course
+
+	Select CourseID, majorID, courseLevel, priorityLevel
+		From Course
+		Where majorID = 'BUSTECH' OR majorID = 'ACORE'
+		Order By courseLevel, majorID, priorityLevel
+		

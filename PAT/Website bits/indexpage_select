@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<h1>Program Advisory Tool</h1>
+	</head>
+	
+	<body>
+		Choose Your Degree
+		<select id="slct1" name="slct1" onchange="populate(this.id,'slct2')">
+			<option value=" ">   </option>
+			<option value="Information Technology">Information Technology</option>
+			<option value="Nursing">Nursing</option>
+		</select>
+		<hr />
+
+		Choose Your Major
+		<select id="slct2" name="slct2"></select>
+		<hr />
+
+		<form>
+			<input type="button" value="Submit" onclick="window.location.href='https://cdn.talkingpointsmemo.com/wp-content/uploads/2019/08/GettyImages-1069396514-600x400@2x.jpg'" />
+		</form>
+
+		<script>
+			function populate(s1,s2){
+				var s1 = document.getElementById(s1);
+				var s2 = document.getElementById(s2);
+				s2.innerHTML = "";
+				if(s1.value == "Information Technology"){
+					var optionArray = ["|","Businesss Technology|Businesss Technology","Systems Technology|Systems Technology","Interactive Media|Interactive Media"];
+				} else if(s1.value == "Nursing"){
+						var optionArray = ["|","Nursing|Nursing"];
+
+				}
+				for(var option in optionArray){
+					var pair = optionArray[option].split("|");
+					var newOption = document.createElement("option");
+					newOption.value = pair[0];
+					newOption.innerHTML = pair[1];
+					s2.options.add(newOption);
+				}
+			}
+			</script>
+		
+		<!--- This code will create a dynamic button based on the values selected in the drop downs  --->
+    <!-- At the moment, it sends you to the same link regardless of degree and major chosen --->
+    
+		<script>
+			jQuery( document ).ready(function( $ ) {
+				$( ".go-btn" ).click(function() {
+					// Grab text from select boxes
+					var firstSelection = $( "#s1 option:selected" ).text();
+					var secondSelection = $( "#s2:selected" ).text();
+
+					// Set URL, change as necessary
+					var url = "https://me.me/i/kid-behind-success-meme-living-up-to-his-name-ded0039831924cb0bb727016182c020f";
+
+					// Redirect
+					window.location.href = url;
+				});
+			});
+			</script>
+
+// ------------------------------------------------------------------------------------------------------------------------
+// The code below accomplishes similar function to above but in Java
+
+<!--- Form for finding out which set of subjects to use might move above the Design your program section and then use some add links see below code for assitance -->
+
+<!-- commit this code out just here for reference for the guys to work on some smarter dropdown menus with small amount of javascript. Move Javascript to seperate document guys its just better practice...	
+	<select id="ddl2" onchange="configureSelectionMenu('ddl2')">
+    </select>
+    <ul id='linkList'></ul>
+    <script type="text/javascript">
+	    
+	    
+    function configureSelectionMenu(ddlBeingChanged) {
+        var ddl = document.getElementById('ddlBeingChanged');
+        var ddl1ChosenValue=document.getElementById('ddl1').value;
+        var linkLists = {
+            Nursing: {
+                "Major": ['https:linkexample.com', 'https://linkexample2'],
+            },
+            InformationTechnology: {
+                "Media": ['http://andorra.example.com/country', 'http://andorra.example.com/overview'],
+                "Software Design": ['http://sickofwritingexamplecode.com', 'http://fakelinkonfakesteet.org'],
+                "BusinessTech": ['http://BUSTECH.example', 'http://BT2.example'],
+            }
+        };
+	    
+        if (ddlBeingChanged == "ddl1") {
+            console.log(ddl1ChosenValue);
+            for (var ddl2 in linkLists[ddl1ChosenValue]){
+                console.log(ddl2);
+                createOption(document.getElementById('ddl2'), ddl2, ddl2);    
+            }
+        } else if (ddlBeingChanged == "ddl2") {
+            var ddl2ChosenValue=document.getElementById('ddl2').value;
+            var linkArray=linkLists[ddl1ChosenValue][ddl2ChosenValue];
+            // The linkArray:
+      
+            var linkListHTML="";
+            for (var i in linkArray){
+                var URL=linkArray[i];
+                linkListHTML+="<li><a href='"+URL+"'>"+URL+"</a></li>";
+            }
+            document.getElementById('linkList').innerHTML=linkListHTML;
+        }
+    }
+    function createOption(ddl, text, value) {
+        var opt = document.createElement('option');
+        opt.value = value;
+        opt.text = text;
+        ddl.options.add(opt);
+    }
+    </script>
+	End of exmaple code put it in a different document and play with it so you understand how it works too. We are going to use it a far bit with all our linking.
+	-->
+</body>
+</html>

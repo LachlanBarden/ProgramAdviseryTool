@@ -1,0 +1,70 @@
+COURSEID,COURSE NAME,UNITS,LEVEL,MAJOR,PRE-REQUISITES,EQUIVELANT,Priority Level,Required
+COMP1010,Computing Fundamentals,10,1000,ACORE,,INFT1001,1,TRUE
+INFT1004,Introduction to Programming,10,1000,ACORE,,SENG1110,1,TRUE
+SENG1110,Object Oriented Programming,10,1000,ACORE,,INFT1004,1,TRUE
+SENG1050,Web Technologies,10,1000,ACORE,,COMP1050,1,TRUE
+INFT1150,Foundations of Information Systems,10,1000,ACORE,,INFT1001,2,TRUE
+COMP1140,Database and Information Management,10,1000,ACORE,SENG1110 or INFT1004,,2,TRUE
+SENG2130,Systems Analysis & Design,10,2000,ACORE,SENG1110 orINFT1004 or COMP1010,,2,TRUE
+INFT2031,Systems & Network Administration,10,2000,ACORE,SENG1050,,3,TRUE
+INFT2150,Business Analysis,10,2000,ACORE,INFT1150,INFT3150,3,TRUE
+SENG2260,Human-Computer Interaction,10,2000,ACORE,"SENG1050, SENG1110 or INFT1004",SENG3300,3,TRUE
+INFT3100,Project Management,10,3000,ACORE,,,4,TRUE
+COMP3851A,Computer Science and Information Technology Work Integrated Learning Part A,10,3000,ACORE,,,5,TRUE
+COMP3851B,Computer Science and Information Technology Work Integrated Learning Part A,10,3000,ACORE,COMP3851A,COMP3850,6,TRUE
+STAT1060,Business Decision Making,10,1000,Business Technology,,,1,TRUE
+EBUS3050,The Digital Economy,10,3000,Business Technology,,EBUS3010,4,TRUE
+EBUS3030,Business Intelligence,10,3000,Business Technology,"COMP1140, SENG1110 or INFT1004",,4,TRUE
+ACFI1001,Accounting for Decision Makers,10,1000,Business Technology,,,2,FALSE
+ACFI1002,Accounting Practice,10,1000,Business Technology,,,2,FALSE
+CMNS1290,Introduction to Public Relations,10,1000,Business Technology,,,2,FALSE
+ECON1001,Microeconomics for Business Decisions,10,1000,Business Technology,,,2,FALSE
+ECON1002,Macroeconomics in the Global Economy,10,1000,Business Technology,,,2,FALSE
+MNGT1001,Introduction to Management,10,1000,Business Technology,,,2,FALSE
+MNGT1002,Introduction to Entrepreneurship and Innovation,10,1000,Business Technology,,,2,FALSE
+MKTG1001,Foundations of Marketing,10,1000,Business Technology,,,2,FALSE
+IRHR2270,Introduction to Human Resource Management,10,2000,Business Technology,,,3,FALSE
+MNGT2002,Business Venturing,10,2000,Business Technology,,,3,FALSE
+MNGT2005,Leadership and Ethics,10,2000,Business Technology,,,3,FALSE
+INFT3007,The Information Resource,10,3000,"Business Technology, Systems Development",,,4,FALSE
+IRHR3035,Managing Diversity,10,3000,Business Technology,,,4,FALSE
+MNGT3008,Advanced Innovation Management,10,3000,Business Technology,,,4,FALSE
+MNGT3011,Leadership Organisation Change,10,3000,Business Technology,,MNGT3005,4,FALSE
+MNGT3012,Strategic Business Management,10,3000,Business Technology,,MNGT2001,4,FALSE
+CMNS1230,Foundations of Media Production,10,1000,Interactive Media,,,1,TRUE
+INFT1201,Digital Technologies for Media and Entertainment,10,1000,Interactive Media,,,2,TRUE
+CMNS1000,Introduction to Digital Communication,10,1000,Interactive Media,,,3,FALSE
+CMNS1005,Media Production,10,1000,Interactive Media,,CMNS1004,3,FALSE
+CMNS1130,Media Production: Sound Production,10,1000,Interactive Media,,,3,FALSE
+DESN1102,Typography in Practice,10,1000,Interactive Media,,,3,FALSE
+MKTG1001,Foundations of Marketing,10,1000,Interactive Media,,,3,FALSE
+CMNS2016,Media Production: Social and Interactive Media,10,2000,"Interactive Media, Systems Development",,,4,FALSE
+CMNS2035,Media Production: Television,10,2000,Interactive Media,,,4,FALSE
+CMNS2400,Media Production: Introduction to radio,10,2000,Interactive Media,,,4,FALSE
+DESN2803,3D Animation,10,2000,Interactive Media,,,4,FALSE
+CMNS3440,Media Production: Screen Drama,10,3000,Interactive Media,,,4,FALSE
+CMNS3450,Media Production Project,20,3000,Interactive Media,,,4,FALSE
+FMCS3100,Digital Culture,10,3000,Interactive Media,,,4,FALSE
+INFT3950,Games Design,10,3000,"Interactive Media, Systems Development",,,4,FALSE
+INFT3960,Games Production,10,3000,Interactive Media,,,4,FALSE
+INFT2012,Application Programming,10,2000,Systems Development,,,2,TRUE
+INFT2051,Mobile Application Programming,10,2000,Systems Development,,INFT2050,2,TRUE
+INFT3050,Web Programming,10,3000,Systems Development,,,3,TRUE
+ENGG1003,Introduction to Procedural Programming,10,1000,Systems Development,,,2,FALSE
+MATH1510,Discrete Mathematics,10,1000,Systems Development,,,2,FALSE
+MNGT1002,Introduction to Entrepreneurship and Innovation,10,1000,Systems Development,,,2,FALSE
+SENG1110,Object Oriented Programming,10,1000,Systems Development,,,2,FALSE
+SENG1120,Data Structures,10,1000,Systems Development,,,2,FALSE
+COMP2230,Algorithms,10,2000,Systems Development,,,3,FALSE
+COMP2240,Operating Systems,10,2000,Systems Development,,,3,FALSE
+SENG2050,Web Engineering,10,2000,Systems Development,,,3,FALSE
+SENG2250,System and Network Security,10,2000,Systems Development,,,3,FALSE
+COMP3260,Data Security,10,3000,Systems Development,,,4,FALSE
+COMP3330,Machine Intellifence,10,3000,Systems Development,,,4,FALSE
+COMP3340,Data Mining,10,3000,Systems Development,,,4,FALSE
+COMP3500,Security Attacks: Analysis and Mitigation,10,3000,Systems Development,,,4,FALSE
+COMP3600,Security Standards & Practices in Industry,10,3000,Systems Development,,,4,FALSE
+INFT3940,Information Technology Applications,10,3000,Systems Development,,,4,FALSE
+INFT3950,Games Design,10,3000,Systems Development,,,4,FALSE
+INFTO3960,Games Production,10,3000,Systems Development,,,4,FALSE
+SENG3400,Network and Distributed Computing,10,3000,Systems Development,,,4,FALSE

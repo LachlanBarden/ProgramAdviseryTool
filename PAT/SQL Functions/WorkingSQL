@@ -1,0 +1,183 @@
+USE MASTER
+	GO
+	IF DB_ID ('PAT') IS NOT NULL				-- Check if it already exists and drop if it is
+	DROP DATABASE PAT;
+	GO
+	CREATE DATABASE PAT;						-- Create database
+	GO
+
+DROP TABLE Program								-- Drop Program table
+DROP TABLE Major								-- Drop major table
+DROP TABLE Course								-- Drop Course table
+DROP TABLE Administrator					    -- Drop Admin table
+DROP TABLE sysAdmin								-- Drop SysAdmin Table
+DROP TABLE database_data						-- Drop imported database Table
+
+GO 
+
+
+	-- Creates Program Table
+
+CREATE TABLE Program (							
+
+	programID char(8) unique not null,
+	programName text not null,
+	unitsRequired smallint not null,
+	maxYears tinyint not null,
+Primary Key (programID)
+)
+
+
+	-- Creates Major Table
+
+CREATE TABLE Major ( 
+	majorID char(8) unique not null,
+	majorName text not null,
+Primary Key (majorID),
+--Foreign Key (programID) References Program(programID),
+--Foreign Key (courseID) References Course(courseID)
+)
+
+
+	-- Creates Course Table
+
+CREATE TABLE Course ( 
+	courseID char(15) unique not null,
+	courseName text not null,
+	unitValue tinyint not null,
+	courseLevel smallint not null,
+	priorityLevel tinyint null,
+	--semAvail tinyint null, -- leaving this out to simplify inital system
+	preRequisite char(50) null, -- may not have any
+	equivalent varchar(50) null, -- may not have any
+	activeStatus text, -- allows for course redundancy
+	mandatory int null,
+	majorID char(15),
+Primary key (courseID),
+--Foreign Key (majorID) REFERENCES Major(MajorID)
+)
+
+
+	-- Creates table for Admin
+
+CREATE TABLE Administrator ( 
+	adminID int not null, --Removed the system generated ID as had problems with it 
+	fName text not null,
+	mName text null, -- for people with three names
+	lName text not null,
+	clearanceLevel smallint not null,
+Primary key (adminID)
+)
+
+
+	--Populate Program table with data
+
+INSERT INTO Program (
+	programID,
+	programName,
+	unitsRequired,
+	maxYears
+)
+
+VALUES
+	('INFT0001', 'Bachelor of Information Technology', 240, 3),
+	('NURS0001', 'Bachelor of Nursing', 240, 3);
+GO
+
+SELECT * FROM Program -- Test that data has been inserted into Progaram
+SELECT * FROM Major -- Test that data has been inserted into Major
+SELECT * FROM Course -- Test that data has been inserted into Course
+
+
+	-- Takes data from imported table and inserts it into the course table
+INSERT INTO Course(courseID, courseName, unitValue, courseLevel, preRequisite, equivalent, mandatory, priorityLevel, majorID)
+	Select [COURSEID], [COURSE_NAME], [UNITS], [LEVEL], [PRE_REQUISITES], [EQUIVELANT], [Required], [Priority_Level], [MajorID]
+	From Database_Data
+
+	-- Inserts Data into Major 
+
+INSERT INTO Major (
+	MajorID,
+	MajorName
+)
+
+VALUES
+	('BUSTECH', 'Business Technology Major'),
+	('SYSDEV', 'Systems Devlopment Major'),
+	('INTMED', 'Interactive Media Major'),
+	('NURS', 'Nursing') ;
+
+
+	-- Inserts Data into the Administrator Table
+
+INSERT INTO Administrator(
+	adminID,
+	fName,
+	mName,
+	lName,
+	clearanceLevel
+)
+Values
+	('001', 'Lachlan', 'Geoffrey', 'Barden', '1'),
+	('002', 'Kim', 'Anne', 'Hempsall', '1'),
+	('003', 'Bohan', 'John', 'He', '1'),
+	('004', 'Shenchong', 'Paul', 'Chen', '1') ;
+
+
+	-- Basic Select Functions to Check if the data inserted properly
+
+	Select * From database_data
+
+	Select * FROM Major
+
+	Select * FROM Administrator
+	
+	Select * FROM Course
+	
+	Select * FROM Program
+
+
+
+	--Select Functions to try to order the selections for the dropdowns
+	 
+Select DISTINCT courseID, courseLevel, priorityLevel FROM Course 
+	Where majorID = 'BUSTECH' OR majorID = 'ACORE' 
+	Order by courseLevel ASC, priorityLevel ASC
+
+Select CourseID, majorID, courseLevel, priorityLevel
+	From Course
+	Where majorID = 'BUSTECH' OR majorID = 'ACORE'
+	Order By courseLevel, majorID, priorityLevel
+
+Select CourseID, majorID, courseLevel, priorityLevel
+	From Course
+	Where majorID = 'BUSTECH' OR majorID = 'ACORE'
+	Order By courseLevel, majorID, preRequisite DESC
+	
+Select CourseID, majorID, courseLevel, priorityLevel
+	From Course
+	Where majorID = 'BUSTECH' OR majorID = 'ACORE'
+	Order by preRequisite when preRequisite is null then 1 else 0 end
+
+
+
+	-- Best Hope is one below so far might change priority order to fix the problems with comp
+
+	Select CourseID, majorID, courseLevel, priorityLevel
+	From Course
+	Where majorID = 'BUSTECH' OR majorID = 'ACORE'
+	Order By courseLevel, majorID, 
+	(CASE
+            WHEN preRequisite IS NULL THEN 0 
+            ELSE 1 
+          END), priorityLevel
+
+
+	Select CourseID, majorID, courseLevel, priorityLevel
+		From Course
+		Where majorID = 'BUSTECH' OR majorID = 'ACORE'
+		Order By courseLevel, majorID, priorityLevel
+
+
+	Select * From Course
+

@@ -1,0 +1,41 @@
+<html>
+
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular.min.js">
+</script>
+
+<script>
+	var app=angular.module("ProgramApp",[]);
+		app.controller("ProgramController", function($scope, $http)
+			{
+				$scope.getprogramdetails=function()
+					{
+						$http.get('programdropdown.php')
+						.success(function(data)
+							{
+								$scope.programresults=data;
+							});
+					}	
+			});
+</script>
+</head>
+
+<body>
+	<center>
+		<h1> Pat</h1> <br> <br>
+		<h2> Select what program you study </h2> <br> <br>
+		
+			<div ng-app="ProgramApp" ng-controller="ProgramController">
+		
+				<select ng-init="getprogramdetails()">
+					<option value="" selected disabled>-- Select Program	</option>
+					<option ng-repeat="program in programresults">{{program.programName}}	</option>
+
+				</select>
+			</div>
+	</center>
+</body>
+
+
+
+</html>

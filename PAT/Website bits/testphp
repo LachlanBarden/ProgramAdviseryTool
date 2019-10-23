@@ -1,0 +1,24 @@
+<html>
+<b>Testing Dropdown Menu</b> <br> <br>
+<?php
+/*$programdropdown = NEW MySQLi('localhost','root','','pat');*/
+
+
+$programResultSet = $programdropdown->query("Select programName FROM program");
+?>
+
+<select name="program">
+<?php
+while($rows = $programResultSet->fetch_assoc())
+{
+	$programName = $rows['programName'];
+	echo "<option value='$programName'>$programName</option>";
+}
+?>
+
+</select>
+
+
+
+
+</html>

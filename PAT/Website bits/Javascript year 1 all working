@@ -1,0 +1,126 @@
+
+
+
+// Enumerate all lists
+var Lists = [ 
+     document.getElementById("ddlSortField"), 
+     document.getElementById("ddlSortField2"), 
+     document.getElementById("ddlSortField3"), 
+     document.getElementById("ddlSortField4")
+],
+     nbLists = Lists.length;
+
+
+// Binds change events to each list
+for(var iList = 0; iList < nbLists; iList++) {
+     Lists[iList].onchange = RemoveItems(iList);
+}
+
+
+function RemoveItems(iList) {
+     return function() {
+          var value = [];
+
+          // Add the selected items of all previous lists including the one changed
+          for(var jList = 0; jList <= iList; jList++)              value.push(Lists[jList].options[Lists[jList].selectedIndex].text);
+
+
+          // Hide in all succeeding lists these items
+          for(var kList = iList + 1; kList < nbLists; kList++)
+               HideItems(kList, value);
+     }
+}
+
+
+// Hide items selected in previous lists in all next lists
+function HideItems(iList, value) {
+     var nbOptions = Lists[iList].options.length,
+         nbValues = value.length,
+         found;
+
+     if(nbValues === 0) return;
+
+     for(var iOption = 0; iOption < nbOptions; iOption++) {
+          // Find if this element is present in the previous lists
+          found = false;
+          for(var iValue = 0; iValue < nbValues; iValue++) {
+               if(Lists[iList].options[iOption].text === value[iValue]) {
+                    found = true;
+                    break;
+               }
+          }
+
+          // If found, we hide it
+         if(found) {
+               Lists[iList].options[iOption].style.display = "none";
+             Lists[iList].options[iOption].selected = "";
+         }
+          // else we un-hide it (in case it was previously hidden)
+          else 
+               Lists[iList].options[iOption].style.display = "";
+     }
+     }
+     
+    
+     
+     
+    
+     // Enumerate all lists
+var Lists2 = [ 
+     document.getElementById("ddlSortField5"), 
+     document.getElementById("ddlSortField6"), 
+     document.getElementById("ddlSortField7"), 
+     document.getElementById("ddlSortField8")
+],
+     nbLists2 = Lists2.length;
+
+
+// Binds change events to each list
+for(var iList2 = 0; iList2 < nbLists2; iList2++) {
+     Lists2[iList2].onchange = RemoveItems2(iList2);
+}
+
+
+function RemoveItems2(iList2) {
+     return function() {
+          var value2 = [];
+
+          // Add the selected items of all previous lists including the one changed
+          for(var jList2 = 0; jList2 <= iList2; jList2++)              value2.push(Lists2[jList2].options[Lists2[jList2].selectedIndex].text);
+
+
+          // Hide in all succeeding lists these items
+          for(var kList2 = iList2 + 1; kList2 < nbLists2; kList2++)
+               HideItems2(kList2, value2);
+     }
+}
+
+
+// Hide items selected in previous lists in all next lists
+function HideItems2(iList2, value2) {
+     var nbOptions2 = Lists2[iList2].options.length,
+         nbValues2 = value2.length,
+         found;
+
+     if(nbValues2 === 0) return;
+
+     for(var iOption2 = 0; iOption2 < nbOptions2; iOption2++) {
+          // Find if this element is present in the previous lists
+          found = false;
+          for(var iValue2 = 0; iValue2 < nbValues2; iValue2++) {
+               if(Lists2[iList2].options[iOption2].text === value2[iValue2]) {
+                    found = true;
+                    break;
+               }
+          }
+
+          // If found, we hide it
+         if(found) {
+               Lists2[iList2].options[iOption2].style.display = "none";
+             Lists2[iList2].options[iOption2].selected = "";
+         }
+          // else we un-hide it (in case it was previously hidden)
+          else 
+               Lists2[iList2].options[iOption2].style.display = "";
+     }
+}

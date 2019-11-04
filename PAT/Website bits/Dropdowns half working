@@ -1,9 +1,14 @@
+<html>
+<head>
+</head>
+<body>
+
 <div id="Year1" class="Year1">
 
 <div id="Year1Sem1" class="Sem1">
 
 <select id="ddlSortField">
-    <option disabled selected value> -- select an course -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>COMP1010</option>
     <option>STAT1060</option>
     <option>INFT1004</option>
@@ -11,7 +16,7 @@
 </select>
 
 <select id="ddlSortField2">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>COMP1010</option>
     <option>STAT1060</option>
     <option>INFT1004</option>
@@ -19,7 +24,7 @@
 </select>
 
 <select id="ddlSortField3">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>COMP1010</option>
     <option>STAT1060</option>
     <option>INFT1004</option>
@@ -27,7 +32,7 @@
 </select>
 
 <select id="ddlSortField4">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>COMP1010</option>
     <option>STAT1060</option>
     <option>INFT1004</option>
@@ -39,7 +44,7 @@
 
 
 <select id="ddlSortField5">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>INFT1150</option>
     <option>COMP1140</option>
     <option>SENG2130</option>
@@ -47,7 +52,7 @@
 </select>
 
 <select id="ddlSortField6">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>INFT1150</option>
     <option>COMP1140</option>
     <option>SENG2130</option>
@@ -56,7 +61,7 @@
 
 
 <select id="ddlSortField7">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>INFT1150</option>
     <option>COMP1140</option>
     <option>SENG2130</option>
@@ -65,7 +70,7 @@
 
 
 <select id="ddlSortField8">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>INFT1150</option>
     <option>COMP1140</option>
     <option>SENG2130</option>
@@ -85,7 +90,7 @@
 
 
 <select id="ddlSortField9">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>INFT2031</option>
     <option>SENG2150</option>
     <option>INFT2150</option>
@@ -93,7 +98,7 @@
 </select>
 
 <select id="ddlSortField10">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>INFT2031</option>
     <option>SENG2150</option>
     <option>INFT2150</option>
@@ -102,7 +107,7 @@
 
 
 <select id="ddlSortField11">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>INFT2031</option>
     <option>SENG2150</option>
     <option>INFT2150</option>
@@ -111,7 +116,7 @@
 
 
 <select id="ddlSortField12">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>INFT2031</option>
     <option>SENG2150</option>
     <option>INFT2150</option>
@@ -122,7 +127,7 @@
 <div id="Year2Sem2" class="Sem2">
 
 <select id="ddlSortField13">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>INFT3100</option>
     <option>EBUS3030</option>
     <option>EBUS3050</option>
@@ -130,7 +135,7 @@
 </select>
 
 <select id="ddlSortField14">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>INFT3100</option>
     <option>EBUS3030</option>
     <option>EBUS3050</option>
@@ -139,7 +144,7 @@
 
 
 <select id="ddlSortField15">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>INFT3100</option>
     <option>EBUS3030</option>
     <option>EBUS3050</option>
@@ -148,7 +153,7 @@
 
 
 <select id="ddlSortField16">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>INFT3100</option>
     <option>EBUS3030</option>
     <option>EBUS3050</option>
@@ -170,7 +175,7 @@
 
 
 <select id="ddlSortField17">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>COMP3581A</option>
     <option>Elective 1000 Level</option>
     <option>Major 2000 Level</option>
@@ -178,7 +183,7 @@
 </select>
 
 <select id="ddlSortField18">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>COMP3581A</option>
     <option>Elective 1000 Level</option>
     <option>Major 2000 Level</option>
@@ -187,7 +192,7 @@
 
 
 <select id="ddlSortField19">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>COMP3581A</option>
     <option>Elective 1000 Level</option>
     <option>Major 2000 Level</option>
@@ -196,7 +201,7 @@
 
 
 <select id="ddlSortField20">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>COMP3581A</option>
     <option>Elective 1000 Level</option>
     <option>Major 2000 Level</option>
@@ -208,7 +213,7 @@
 
 
 <select id="ddlSortField21">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>COMP3581B</option>
     <option>Elective 1000 Level</option>
     <option>Major 3000 Level</option>
@@ -216,7 +221,7 @@
 </select>
 
 <select id="ddlSortField22">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>COMP3581B</option>
     <option>Elective 1000 Level</option>
     <option>Major 3000 Level</option>
@@ -225,7 +230,7 @@
 
 
 <select id="ddlSortField23">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>COMP3581B</option>
     <option>Elective 1000 Level</option>
     <option>Major 3000 Level</option>
@@ -234,12 +239,19 @@
 
 
 <select id="ddlSortField24">
-    <option disabled selected value> -- select an option -- </option>
+    <option disabled selected value> -- select a course -- </option>
     <option>COMP3581B</option>
     <option>Elective 1000 Level</option>
     <option>Major 3000 Level</option>
     <option>Elective 2000 Level</option>
 </select>
+
 </div>
+
 </div>
+
+
+Submit Button goes here
+</body>
+</html>
 

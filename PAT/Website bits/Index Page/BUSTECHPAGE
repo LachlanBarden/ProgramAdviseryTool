@@ -1,0 +1,348 @@
+<section id="service-page" class="pages service-page">
+			<div class="container">
+
+				<div id="Majortable" class="Majortable">
+					<b>Business Technology Major</b>
+					<p>
+						Year 1
+					</p>
+						<b>
+						<div id="Year1Sem1" class="Sem1" style="text-align:center; column-count:4; column-gap:2%; column-width:20%;">
+
+							<div style="padding: 0px 0px 30px 0px; float:">
+								<select id="ddlSortField" style="width:100%; height:40px; text-size-adjust:auto; ">
+									<option disabled selected value> -- select a course -- </option>
+									<option>COMP1010</option>
+									<option>STAT1060</option>
+									<option>INFT1004</option>
+									<option>SENG1050</option>
+									<option>INFT1150</option>
+									<option>COMP1140</option>
+									<option>SENG2130</option>
+									
+
+								</select>
+							</div>
+
+						</b>
+					<b>
+						<div style="padding: 0px 0px 30px 0px;">
+
+							<select id="ddlSortField2" style="width:100%; height:40px; text-size-adjust:auto;">
+								<option disabled selected value> -- select a course -- </option>
+									<option>COMP1010</option>
+									<option>STAT1060</option>
+									<option>INFT1004</option>
+									<option>SENG1050</option>
+									<option>INFT1150</option>
+									<option>COMP1140</option>
+									<option>SENG2130</option>
+									
+							</select>
+
+						</div>
+					</b>
+					</p><b>
+						<div style="padding: 0px 0px 30px 0px;">
+
+							<select id="ddlSortField3" style="width:100%; height:40px; text-size-adjust:auto;">
+								<option disabled selected value> -- select a course -- </option>
+									<option>COMP1010</option>
+									<option>STAT1060</option>
+									<option>INFT1004</option>
+									<option>SENG1050</option>
+									<option>INFT1150</option>
+									<option>COMP1140</option>
+									<option>SENG2130</option>
+									
+							</select>
+						</div>
+						<div style="padding: 0px 0px 30px 0px;">
+						<select id="ddlSortField4" style="width:100%; height:40px; text-size-adjust:auto;">
+							<option disabled selected value> -- select a course -- </option>
+									<option>COMP1010</option>
+									<option>STAT1060</option>
+									<option>INFT1004</option>
+									<option>SENG1050</option>
+									<option>INFT1150</option>
+									<option>COMP1140</option>
+									<option>SENG2130</option>
+									
+						</select>
+						</div>
+
+				</div>
+
+							<div class name="Year1Sem2"  style="text-align:center; column-count:4; column-gap:2%; column-width:10%;">
+
+								<div style="padding: 0px 0px 30px 0px;">
+									<select id="ddlSortField5" style="width:100%; height:40px; text-size-adjust:auto;">
+										<option disabled selected value> -- select a course -- </option>
+									<option>COMP1010</option>
+									<option>STAT1060</option>
+									<option>INFT1004</option>
+									<option>SENG1050</option>
+									<option>INFT1150</option>
+									<option>COMP1140</option>
+									<option>SENG2130</option>
+									
+									</select>
+								</div>
+
+
+								<div style="padding: 0px 0px 30px 0px;">
+									<select id="ddlSortField6" style="width:100%; height:40px; text-size-adjust:auto;">
+										<option disabled selected value> -- select a course -- </option>
+									<option>COMP1010</option>
+									<option>STAT1060</option>
+									<option>INFT1004</option>
+									<option>SENG1050</option>
+									<option>INFT1150</option>
+									<option>COMP1140</option>
+									<option>SENG2130</option>
+									
+									</select>
+								</div>
+
+								<div style="padding: 0px 0px 30px 0px;">
+								<select id="ddlSortField7"  style="width:100%; height:40px; text-size-adjust:auto;">
+									<option disabled selected value> -- select a course -- </option>
+									<option>COMP1010</option>
+									<option>STAT1060</option>
+									<option>INFT1004</option>
+									<option>SENG1050</option>
+									<option>INFT1150</option>
+									<option>COMP1140</option>
+									<option>SENG2130</option>
+									
+								</select>
+								</div>
+
+								<div style="padding: 0px 0px 30px 0px;">
+								<select id="ddlSortField8"  style="width:100%; height:40px; text-size-adjust:auto;">
+									<option disabled selected value> -- select a Major Course -- </option>
+									<option>ACFI1001</option>
+                  <option>ACFI1002</option>
+                  <option>CMNS1290</option>
+                  <option>ECON1002</option>
+                  <option>MNGT1001</option>
+                  <option>MGNT1002</option>
+                  <option>MKTG1001</option>
+									
+								</select>
+									</div>
+							</div>
+					</div>
+
+
+
+
+
+
+
+						<p>
+							Year 2
+						</p>
+					<div id="Year2Sem1" class="Sem1" style="text-align:center; column-count:4; column-gap:2%; column-width:20%;">
+
+
+
+						<div style="padding: 0px 0px 30px 0px;"> 
+						<select id="ddlSortField9" style="width:100%; height:40px; text-size-adjust:auto;" >
+							<option disabled selected value> -- select a course -- </option>
+							<option>INFT2031</option>
+							<option>SENG2150</option>
+							<option>INFT2150</option>
+							<option>INFT3100</option>
+
+
+						</select>
+						</div>
+
+						<div style="padding: 0px 0px 30px 0px;">
+							<select id="ddlSortField10" style="width:100%; height:40px; text-size-adjust:auto;">
+								<option disabled selected value> -- select a course -- </option>
+							<option>INFT2031</option>
+							<option>SENG2150</option>
+							<option>INFT2150</option>
+							<option>INFT3100</option>
+
+							</select>
+						</div>
+
+							<div style="padding: 0px 0px 30px 0px;">
+								<select id="ddlSortField11" style="width:100%; height:40px; text-size-adjust:auto;">
+									<option disabled selected value> -- select a Major Course -- </option>
+                   <option>EBUS3030</option>
+                    <option>EBUS3050</option>
+
+								</select>
+							</div>
+								<div style="padding: 0px 0px 30px 0px;">
+									<select id="ddlSortField12"  style="width:100%; height:40px; text-size-adjust:auto;">
+										<option disabled selected value> -- select a Major Course -- </option>
+										<option>IRHR2270</option>
+                    <option>MNGT2002</option>
+                    <option>MNGT2005</option>
+									</select>
+								</div>
+								</div>
+
+								<div id="Year2Sem2" class="Sem2" style="text-align:center; column-count:4; column-gap:2%; column-width:20%;">
+								<div style="padding: 0px 0px 30px 0px;">
+									<select id="ddlSortField13" style="width:100%; height:40px; text-size-adjust:auto;">
+										<option disabled selected value> -- select a Major Course -- </option>
+										<option>IRHR2270</option>
+                    <option>MNGT2002</option>
+                    <option>MNGT2005</option>
+									</select>
+								</div>
+								<div style="padding: 0px 0px 30px 0px;">
+									<select id="ddlSortField14" style="width:100%; height:40px; text-size-adjust:auto;">
+										<option disabled selected value> -- select a Major Course -- </option>
+                    <option>EBUS3030</option>
+                    <option>EBUS3050</option>
+
+									</select>
+								</div>
+
+
+								<div style="padding: 0px 0px 30px 0px;">
+									<select id="ddlSortField15" style="width:100%; height:40px; text-size-adjust:auto;">
+										<option disabled selected value> -- select a course -- </option>
+								<option>INFT2031</option>
+							<option>SENG2150</option>
+							<option>INFT2150</option>
+							<option>INFT3100</option>
+
+									</select>
+									</div>
+
+								<div style="padding: 0px 0px 30px 0px;">
+									<select id="ddlSortField16" style="width:100%; height:40px; text-size-adjust:auto;">
+										<option disabled selected value> -- select a course -- </option>
+									<option>INFT2031</option>
+							<option>SENG2150</option>
+							<option>INFT2150</option>
+							<option>INFT3100</option>
+
+									</select>
+
+								</div>
+								</div>
+
+
+
+
+
+				<div id="Year3" class="Year3" style="text-align:left"><p>
+	Year 3
+</p>
+					<div id="Year3Sem1" class="Sem1" style="text-align:center; column-count:4; column-gap:2%; column-width:20%;">
+
+
+
+						<div style="padding: 0px 0px 30px 0px;">
+						<select id="ddlSortField17" style="width:100%; height:40px; text-size-adjust:auto;">
+							<option disabled selected value> -- select an Elective -- </option>
+							<option>INFO1010</option>
+              <option>DESN1002</option>
+              <option>POLI1010</option>
+              <option>MATH1003</option>
+              <option>SENG1004</option>
+              <option>SENG1120</option>
+              <option>OTHER</option>
+							
+						</select>
+						</div>
+
+						<div style="padding: 0px 0px 30px 0px;">
+						<select id="ddlSortField18" style="width:100%; height:40px; text-size-adjust:auto;">
+							<option disabled selected value> -- select an Elective -- </option>
+              <option>INFO1010</option>
+              <option>DESN1002</option>
+              <option>POLI1010</option>
+              <option>MATH1003</option>
+              <option>SENG1004</option>
+              <option>SENG1120</option>
+              <option>OTHER</option>
+						</select>
+						</div>
+
+						<div style="padding: 0px 0px 30px 0px;">
+						<select id="ddlSortField19" style="width:100%; height:40px; text-size-adjust:auto;">
+							<option disabled selected value> -- select an Elective -- </option>
+              <option>STAT2020</option>
+              <option>MGNT2004</option>
+              <option>MKTG2010</option>
+              <option>MKTG3002</option>
+              <option>IRHR2270</option>
+              <option>INFT2051</option>
+               <option>OTHER</option>
+						</select>
+						</div>
+
+
+						<div style="padding: 0px 0px 30px 0px;">
+						<select id="ddlSortField20" style="width:100%; height:40px; text-size-adjust:auto;">
+							<option disabled selected value> -- select a course -- </option>
+							<option>COMP3581A</option>
+						</select>
+							</div>
+					</div>
+
+					<div id="Year3Sem2" class="Sem2" style="text-align:center; column-count:4; column-gap:2%; column-width:20%;">
+
+						<div style="padding: 0px 0px 30px 0px;">
+						<select id="ddlSortField21" style="width:100%; height:40px; text-size-adjust:auto;">
+							<option disabled selected value> -- select an Elective -- </option>
+							<option>INFO1010</option>
+              <option>DESN1002</option>
+              <option>POLI1010</option>
+              <option>MATH1003</option>
+              <option>SENG1004</option>
+              <option>SENG1120</option>
+              <option>OTHER</option>
+							
+						</select>
+						</div>
+
+						<div style="padding: 0px 0px 30px 0px;">
+						<select id="ddlSortField22" style="width:100%; height:40px; text-size-adjust:auto;">
+							<option disabled selected value> -- select an Elective -- </option>
+              <option>STAT2020</option>
+              <option>MGNT2004</option>
+              <option>MKTG2010</option>
+              <option>MKTG3002</option>
+              <option>IRHR2270</option>
+              <option>INFT2051</option>
+               <option>OTHER</option>
+						</select>
+						</div>
+
+						<div style="padding: 0px 0px 30px 0px;">
+						<select id="ddlSortField23" style="width:100%; height:40px; text-size-adjust:auto;">
+							<option disabled selected value> -- select an Elective -- </option>
+              <option>STAT2020</option>
+              <option>MGNT2004</option>
+              <option>MKTG2010</option>
+              <option>MKTG3002</option>
+              <option>IRHR2270</option>
+              <option>INFT2051</option>
+               <option>OTHER</option>
+						</select>
+						</div>
+
+						<div style="padding: 0px 0px 30px 0px;">
+						<select id="ddlSortField24" style="width:100%; height:40px; text-size-adjust:auto;">
+							<option disabled selected value> -- select a course -- </option>
+							<option>COMP3581B</option>
+
+						</select>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+        </section>

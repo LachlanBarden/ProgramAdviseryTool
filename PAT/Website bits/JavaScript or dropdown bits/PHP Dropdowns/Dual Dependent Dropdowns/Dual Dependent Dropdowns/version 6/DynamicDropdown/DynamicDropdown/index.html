@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+	<meta charset='UTF-8'>
+	
+	<title>Choose your Degree</title>
+	
+	<link rel='stylesheet' href='css/style.css'>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+	<script>
+		$(function() {
+		
+			$("#text-one").change(function() {
+				$("#text-two").load("textdata/" + $(this).val() + ".txt");
+			});
+			
+			$("#json-one").change(function() {
+			
+				var $dropdown = $(this);
+			
+				$.getJSON("jsondata/data.json", function(data) {
+				
+					var key = $dropdown.val();
+					var vals = [];
+										
+					switch(key) {
+						case 'beverages':
+							vals = data.degree.split(",");
+							break;
+						case 'snacks':
+							vals = data.major.split(",");
+							break;
+						case 'base':
+							vals = ['Please choose from above'];
+					}
+					
+					var $jsontwo = $("#json-two");
+					$jsontwo.empty();
+					$.each(vals, function(index, value) {
+						$jsontwo.append("<option>" + value + "</option>");
+					});
+			
+				});
+			});
+
+		});
+	</script>
+</head>
+
+<body>
+
+
+		
+
+		
+		<h1>Please Choose Degree</h1>
+
+		<select id="json-one">
+			<option selected value="base">Please Select</option>
+			<option value="degree">Degree</option>
+			<option value="major">Major</option>
+		</select>
+	
+		<br />
+	
+		<select id="json-two">
+			<option>Please choose from above</option>
+		</select>
+	
+	</div>
+	
+</body>
+
+</html>

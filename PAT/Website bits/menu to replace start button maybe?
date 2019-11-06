@@ -1,0 +1,54 @@
+<html>
+
+<div style="width:80%; padding-left:20%;">
+<nav>
+<a id="resp-menu" class="responsive-menu" href="#"><i class="fa fa-reorder" style="width:50%;"}></i> Timer Table Builder</a>    
+   <ul class="menu">
+   <li><a class="homer" href="#"><i class="fa fa-home"></i>Choose your Degree and Major</a>
+
+   </li>
+ 
+  <li><a  href="#"><i class="fa fa-camera"></i>Information Technology</a>
+  <ul class="sub-menu">
+   <li><a href="#">Management</a></li>
+   <li><a href="#">Interactive Media</a> </li>
+     <li><a href="#">Systems Devlopment</a>
+    
+   </li>
+   </ul>
+  </li>
+  
+  
+  
+    <li><a  href="#"><i class="fa fa-camera"></i>Nursing</a>
+
+  </li>
+  
+  
+  
+  
+  </nav>
+  </div>
+  
+  <script>
+  $(document).ready(function(){ 
+	var touch 	= $('#resp-menu');
+	var menu 	= $('.menu');
+ 
+	$(touch).on('click', function(e) {
+		e.preventDefault();
+		menu.slideToggle();
+	});
+	
+	$(window).resize(function(){
+		var w = $(window).width();
+		if(w > 767 && menu.is(':hidden')) {
+			menu.removeAttr('style');
+		}
+	});
+	
+});
+
+</script>
+
+</html>

@@ -1,0 +1,66 @@
+COURSEID,COURSE NAME,UNITS,LEVEL,MAJOR,PRE-REQUISITES,EQUIVELANT,Priority Level,Required,MajorID
+COMP1010,Computing Fundamentals,10,1000,ACORE,,INFT1001,1,1,ACORE
+INFT1004,Introduction to Programming,10,1000,ACORE,,SENG1110,1,1,ACORE
+SENG1110,Object Oriented Programming,10,1000,ACORE,,INFT1004,1,1,ACORE
+SENG1050,Web Technologies,10,1000,ACORE,,COMP1050,1,1,ACORE
+INFT1150,Foundations of Information Systems,10,1000,ACORE,,INFT1001,2,1,ACORE
+COMP1140,Database and Information Management,10,1000,ACORE,SENG1110 or INFT1004,,2,1,ACORE
+SENG2130,Systems Analysis & Design,10,2000,ACORE,SENG1110 orINFT1004 or COMP1010,,2,1,ACORE
+INFT2031,Systems & Network Administration,10,2000,ACORE,SENG1050,,3,1,ACORE
+INFT2150,Business Analysis,10,2000,ACORE,INFT1150,INFT3150,3,1,ACORE
+SENG2260,Human-Computer Interaction,10,2000,ACORE,"SENG1050, SENG1110 or INFT1004",SENG3300,3,1,ACORE
+INFT3100,Project Management,10,3000,ACORE,,,4,1,ACORE
+COMP3851A,Computer Science and Information Technology Work Integrated Learning Part A,10,3000,ACORE,,,5,1,ACORE
+COMP3851B,Computer Science and Information Technology Work Integrated Learning Part A,10,3000,ACORE,COMP3851A,COMP3850,6,1,ACORE
+STAT1060,Business Decision Making,10,1000,Business Technology,,,1,1,BUSTECH
+EBUS3050,The Digital Economy,10,3000,Business Technology,,EBUS3010,4,1,BUSTECH
+EBUS3030,Business Intelligence,10,3000,Business Technology,"COMP1140, SENG1110 or INFT1004",,4,1,BUSTECH
+ACFI1001,Accounting for Decision Makers,10,1000,Business Technology,,,2,0,BUSTECH
+ACFI1002,Accounting Practice,10,1000,Business Technology,,,2,0,BUSTECH
+CMNS1290,Introduction to Public Relations,10,1000,Business Technology,,,2,0,BUSTECH
+ECON1001,Microeconomics for Business Decisions,10,1000,Business Technology,,,2,0,BUSTECH
+ECON1002,Macroeconomics in the Global Economy,10,1000,Business Technology,,,2,0,BUSTECH
+MNGT1001,Introduction to Management,10,1000,"Business Technology, Systems Development",,,2,0,"BUSTECH, SYSDEV"
+MNGT1002,Introduction to Entrepreneurship and Innovation,10,1000,Business Technology,,,2,0,BUSTECH
+MKTG1001,Foundations of Marketing,10,1000,"Business Technology, Interactive Media",,,2,0,"BUSTECH, INTMED"
+IRHR2270,Introduction to Human Resource Management,10,2000,Business Technology,,,3,0,BUSTECH
+MNGT2002,Business Venturing,10,2000,Business Technology,,,3,0,BUSTECH
+MNGT2005,Leadership and Ethics,10,2000,Business Technology,,,3,0,BUSTECH
+INFT3007,The Information Resource,10,3000,"Business Technology, Systems Development",,,4,0,"BUSTECH, SYSDEV"
+IRHR3035,Managing Diversity,10,3000,Business Technology,,,4,0,BUSTECH
+MNGT3008,Advanced Innovation Management,10,3000,Business Technology,,,4,0,BUSTECH
+MNGT3011,Leadership Organisation Change,10,3000,Business Technology,,MNGT3005,4,0,BUSTECH
+MNGT3012,Strategic Business Management,10,3000,Business Technology,,MNGT2001,4,0,BUSTECH
+CMNS1230,Foundations of Media Production,10,1000,Interactive Media,,,1,1,INTMED
+INFT1201,Digital Technologies for Media and Entertainment,10,1000,Interactive Media,,,2,1,INTMED
+CMNS1000,Introduction to Digital Communication,10,1000,Interactive Media,,,3,0,INTMED
+CMNS1005,Media Production,10,1000,Interactive Media,,CMNS1004,3,0,INTMED
+CMNS1130,Media Production: Sound Production,10,1000,Interactive Media,,,3,0,INTMED
+DESN1102,Typography in Practice,10,1000,Interactive Media,,,3,0,INTMED
+CMNS2016,Media Production: Social and Interactive Media,10,2000,"Interactive Media, Systems Development",,,4,0,"INTMED, SYSDEV"
+CMNS2035,Media Production: Television,10,2000,Interactive Media,,,4,0,INTMED
+CMNS2400,Media Production: Introduction to radio,10,2000,Interactive Media,,,4,0,INTMED
+DESN2803,3D Animation,10,2000,Interactive Media,,,4,0,INTMED
+CMNS3440,Media Production: Screen Drama,10,3000,Interactive Media,,,4,0,INTMED
+CMNS3450,Media Production Project,20,3000,Interactive Media,,,4,0,INTMED
+FMCS3100,Digital Culture,10,3000,Interactive Media,,,4,0,INTMED
+INFT3950,Games Design,10,3000,"Interactive Media, Systems Development",,,4,0,"INTMED, SYSDEV"
+INFT3960,Games Production,10,3000,Interactive Media,,,4,0,INTMED
+INFT2012,Application Programming,10,2000,Systems Development,,,2,1,SYSDEV
+INFT2051,Mobile Application Programming,10,2000,Systems Development,,INFT2050,2,1,SYSDEV
+INFT3050,Web Programming,10,3000,Systems Development,,,3,1,SYSDEV
+ENGG1003,Introduction to Procedural Programming,10,1000,Systems Development,,,2,0,SYSDEV
+MATH1510,Discrete Mathematics,10,1000,Systems Development,,,2,0,SYSDEV
+SENG1120,Data Structures,10,1000,Systems Development,,,2,0,SYSDEV
+COMP2230,Algorithms,10,2000,Systems Development,,,3,0,SYSDEV
+COMP2240,Operating Systems,10,2000,Systems Development,,,3,0,SYSDEV
+SENG2050,Web Engineering,10,2000,Systems Development,,,3,0,SYSDEV
+SENG2250,System and Network Security,10,2000,Systems Development,,,3,0,SYSDEV
+COMP3260,Data Security,10,3000,Systems Development,,,4,0,SYSDEV
+COMP3330,Machine Intellifence,10,3000,Systems Development,,,4,0,SYSDEV
+COMP3340,Data Mining,10,3000,Systems Development,,,4,0,SYSDEV
+COMP3500,Security Attacks: Analysis and Mitigation,10,3000,Systems Development,,,4,0,SYSDEV
+COMP3600,Security Standards & Practices in Industry,10,3000,Systems Development,,,4,0,SYSDEV
+INFT3940,Information Technology Applications,10,3000,Systems Development,,,4,0,SYSDEV
+INFTO3960,Games Production,10,3000,Systems Development,,,4,0,SYSDEV
+SENG3400,Network and Distributed Computing,10,3000,Systems Development,,,4,0,SYSDEV

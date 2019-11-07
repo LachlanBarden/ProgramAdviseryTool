@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Program Advisory Tool </title>
+	</head>
+	<body>
+		<h1>Bachelor of Information Technology</h1>
+		<p>Semester One - 2020</p>
+	</body>
+</html>
+
+<?php
+
+
+$user="root";
+$password="";
+$db="pat";
+$conn= new mysqli("localhost", $user, $password, $db) or die (" Your are not connected");
+//echo "You are connected";
+
+
+$sql = "SELECT courseID, courseName FROM Course";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+	while($row = $result-> fetch_assoc()) {
+		echo "Course ID: " . $row["courseID"]. " Course Name: " . $row["courseName"]. " <br>";
+	}
+} else {
+	echo "0 results";
+}
+$conn->close();
+?>
